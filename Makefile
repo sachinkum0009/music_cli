@@ -4,7 +4,7 @@ CC = g++
 # compiler glags:
 # -g 		- this flag adds debugging information to the executable file
 # -Wall		- this flag is used to turn on most compiler warnings
-CFLAGS = -Wall
+CFLAGS = -Wall -std=c++17
 
 # The build target
 TARGET = main
@@ -12,7 +12,7 @@ TARGET = main
 all: $(TARGET)
 
 $(TARGET): src/$(TARGET).cpp
-			$(CC) $(CFLAGS) -o $(TARGET).out src/$(TARGET).cpp -I./
+			$(CC) $(CFLAGS) -o $(TARGET).out src/$(TARGET).cpp src/music.cpp -I./
 
 check:
 			./$(TARGET).out

@@ -1,7 +1,9 @@
-#include <iostream>
+#include "include/music.hpp"
+
 
 int main(int argc, char const *argv[])
 {
-    printf("Hello World\n");
+    music::Music Obj;
+    Obj.run();
     return 0;
 }
